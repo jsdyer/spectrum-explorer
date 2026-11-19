@@ -10,7 +10,9 @@ Enter 3550 MHz to open the 3500–3650 MHz band. Compare BC and Nova Scotia in t
 
 ## Allocation and licence records
 
-A frequency lookup returns the national allocation containing the entered frequency in kHz, MHz or GHz. Search the official service wording, including secondary services, or move to an adjacent band. The regional table ranks all ten provinces and three territories by published transmitter rows or distinct coordinate pairs. Follow [Spectrum Atlas](https://coolcode.ca/spectrumatlas/) to inspect the individual mapped records.
+A frequency lookup returns the national allocation containing the entered frequency in kHz, MHz or GHz. Search the official service wording, including secondary services, or move to an adjacent band. A keyboard-accessible map lets you select a province and compare record counts geographically. Its public-domain Natural Earth 1:50m outlines use a Lambert conformal conic projection. Run `python scripts/map_regions.py` to regenerate them. [Boundary source and terms](https://www.naturalearthdata.com/about/terms-of-use/).
+
+The regional table ranks all ten provinces and three territories by published transmitter rows or distinct coordinate pairs. Follow [Spectrum Atlas](https://coolcode.ca/spectrumatlas/) to inspect the individual mapped records.
 
 The 2026 allocation table has 535 consecutive ranges. The November 3, 2026 terrestrial site extract contributes 2,108,492 rows with a usable TX centre frequency and recognized province or territory. At 3,550 MHz the table allocates 3,500–3,650 MHz to fixed and mobile services with a stated aeronautical exception. For the entire band, the initial edition counts 23,888 BC records at 1,221 distinct coordinate pairs and 3,734 Nova Scotia records at 384 pairs. The application shows the current edition for both sources.
 

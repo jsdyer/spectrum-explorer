@@ -32,6 +32,9 @@ def main():
                 page.wait_for_selector('#rows tr')
                 assert page.locator('#rows tr').count() == 13
                 assert '3500' in page.locator('#band').inner_text()
+                page.locator('#map path[data-region="NS"]').focus()
+                page.keyboard.press('Enter')
+                assert 'Nova Scotia' in page.locator('#mapDetail').inner_text()
                 page.fill('#freq','3600'); page.click('#find')
                 assert '3650' in page.locator('#band').inner_text()
                 page.fill('#query','amateur')
