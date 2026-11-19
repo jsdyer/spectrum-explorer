@@ -1,16 +1,51 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "spectrum-explorer",
+  "title": "Spectrum Explorer",
+  "description": "Look up a Canadian frequency band and compare published transmitter records by province and territory.",
+  "category": "liminal-tools",
+  "tags": [
+    "Canada",
+    "spectrum",
+    "radio",
+    "ISED",
+    "allocation"
+  ],
+  "icon": "radio-tower",
+  "url": "/spectrum-explorer/",
+  "source": "https://github.com/jsdyer/spectrum-explorer",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "snapshot",
+    "detail": "ISED’s Canadian allocation table is paired with counts from the terrestrial spectrum licence site extract.",
+    "cadence": "Monthly",
+    "probes": [
+      {
+        "url": "https://coolcode.ca/spectrum-explorer/data/status.json",
+        "label": "Source retrieved",
+        "path": [
+          "retrieved"
+        ],
+        "count_at": {
+          "path": [
+            "count"
+          ],
+          "unit": "allocation bands"
+        }
+      },
+      {
+        "url": "https://coolcode.ca/spectrum-explorer/data/status.json",
+        "label": "Site extract",
+        "path": [
+          "edition"
+        ],
+        "count_at": {
+          "path": [
+            "assignment_count"
+          ],
+          "unit": "transmitter rows"
+        }
+      }
+    ]
   }
 }
